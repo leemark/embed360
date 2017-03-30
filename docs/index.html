@@ -9,7 +9,7 @@
         body {
             margin: 0 auto;
             padding: 1em;
-            max-width: 900px;
+            max-width: 800px;
         }
         
         .embed360 {
@@ -26,12 +26,12 @@
     <h1>embed360</h1>
     <p>Easily embed multiple 360° photos into your webpages using the power and simplicity of <a href="https://aframe.io/">A-frame</a>.</p>
 
-    <h2>Why use this plugin?</h2>
-    <p>A-frame makes it <a href="https://aframe.io/docs/0.5.0/introduction/">very easy</a> to build WebVR experiences, including the ability to <a href="https://aframe.io/docs/0.5.0/primitives/a-sky.html">display 360 images</a> and even to embed them <a href="https://aframe.io/docs/0.5.0/components/embedded.html">into existing html pages</a>.</p>
-
     <div class="embed360">
         <img src="https://leemark.github.io/embed360/img/example1.jpg">
     </div>
+    
+    <h2>Why use this plugin?</h2>
+    <p>A-frame makes it <a href="https://aframe.io/docs/0.5.0/introduction/">very easy</a> to build WebVR experiences, including the ability to <a href="https://aframe.io/docs/0.5.0/primitives/a-sky.html">display 360 images</a> and even to embed them <a href="https://aframe.io/docs/0.5.0/components/embedded.html">into existing html pages</a>.</p>
 
     <p>Where it gets tricky though, is if you want to include multiple 360 photos into the same page. Currently, only one A-frame "scene" (&lt;a-scene&gt;) can exist on a page, so if you need multiple 360 photos to be embedded in a page, you'd need to create a new html page for each photo and embed each one of those new pages in an iframe.</p>
     <p>The embed360.js script handles all of this for you, by dynamically creating these iframes and building a simple A-frame 360 photo scene inside.</p>
@@ -62,7 +62,15 @@
         &lt;/script&gt;<br>
     </code>
     </p>
-    
+    <p>It's recommended that you specify a height and max-width for your 360 photo containers so they end up sized appropriately and not too short or too wide. How you do this is up to you, but here is the CSS used for the examples on this page:</p>
+    <p>
+    <code>
+    .embed360 {
+    &nbsp;&nbsp;height: 350px;
+    &nbsp;&nbsp;max-width: 700px;
+        }
+    </code>
+    </p>    
     <p>That's it!</p>
 
     <div class="embed360">
@@ -89,7 +97,7 @@
     </p>
     
     <script>
-        embed360('.embed360', '//cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js');
+        embed360('.embed360');
     </script>
 </body>
 
