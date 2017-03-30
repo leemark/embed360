@@ -16,6 +16,7 @@ function embed360(selectors, aframeSrc) {
     var iframe = document.createElement('iframe');
     var content = '<!DOCTYPE html>' +
       '<head><title>A photo in aframe in an iframe</title>' +
+      '<script type="text/javascript" src="https://cdn.rawgit.com/leemark/777b5ce94bce409b5f208c924bb5878b/raw/4958a8a59a50f18b5f8cbaa00c9209082dd2dfdf/customeventpolyfill.js"><\/script>' +    
       '<script type="text/javascript" src="' + aframeSrc + '"><\/script><\/head>' +
       '<body>' +
       '<a-scene>' +
