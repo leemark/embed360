@@ -14,15 +14,15 @@ function embed360(selectors) {
     el.removeChild(img);
     var iframe = document.createElement('iframe');
     var content = '<!DOCTYPE html>' +
-      '<head><title>Dynamic iframe</title>' +
+      '<head><title>A photo in aframe in an iframe</title>' +
       '<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js"><\/script><\/head>' +
-      '<body><div id="innerCtnr">' +
+      '<body>' +
       '<a-scene>' +
       '<a-assets>' +
       '<img id="sky" crossorigin src="' + imgsrc + '">' +
       '</a-assets>' +
       '<a-sky src="#sky"></a-sky>' +
-      '</a-scene></div>' +
+      '</a-scene>' +
       '</body></html>';
     iframe.setAttribute('allowfullscreen', 'yes');
     iframe.setAttribute('allowvr', 'yes');
