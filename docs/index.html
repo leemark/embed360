@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>360 photo embed using aframe</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/leemark/embed360/master/embed360.js"></script>
 </head>
 
 <body>
     <div class="embed360">
         <img src="img/example1.jpg">
     </div>
-
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/leemark/embed360/master/embed360.js"></script>
+    <script>
+    embed360('.embed360');
+    </script>
 </body>
 
 </html>
