@@ -9,7 +9,7 @@
         body {
             margin: 0 auto;
             padding: 1em;
-            max-width: 900px; 
+            max-width: 900px;
         }
         
         .embed360 {
@@ -39,25 +39,48 @@
         <img src="https://leemark.github.io/embed360/img/example2.jpg">
     </div>
     <h2>Usage:</h2>
-    <pre><code>    
-        Add a div and an image for each 360 photo:
 
+    <p>Add a div and an image for each 360 photo:</p>
+    <code><pre> 
         &lt;div class="embed360"&gt;
             &lt;img src="/path/to/image.jpg"&gt;
         &lt;/div&gt;
-        
-        Include the embed360 script:
- 
+    </pre></code>
+    <p>Include the embed360 script:</p>
+    <code><pre> 
         &lt;script src="path/to/embed360.js"&gt;&lt;/script&gt;
+    </pre></code>
+    
+    <p>Call embed360() and pass in a class, id, or other selector for the photo container(s):</p>
+    <code><pre> 
+        &lt;script&gt;
+            embed360('.embed360');
+        &lt;/script&gt;
+    </pre></code>
+    
+    <p>That's it!</p>
 
-        That's it!
-    </code></pre>
     <div class="embed360">
         <img src="https://leemark.github.io/embed360/img/example3.jpg">
     </div>
+    
+    <h2>Options:</h2>
+    
+    <p>Provide your own path to the aframe library, as the second argument to embed360() (uses cloudflare CDN version by default).</p>
+        <code><pre> 
+        &lt;script&gt;
+            embed360('.embed360', '/your/path/to/aframe.js');
+        &lt;/script&gt;
+        </pre></code>
+    <p>Use a data attribute to specify the starting position (<a href="https://aframe.io/docs/0.5.0/components/rotation.html">x, y, and z-axis rotation</a>) for each photo.</p>
+    <code><pre> 
+        &lt;div class="embed360" data-rotation="0 90 -10"&gt;
+            &lt;img src="/path/to/image.jpg"&gt;
+        &lt;/div&gt;
+    </pre></code>
+    
     <script>
         embed360('.embed360', '//cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js');
-
     </script>
 </body>
 
