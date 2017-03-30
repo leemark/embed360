@@ -47,16 +47,16 @@
         &lt;/div&gt;
     </pre></code>
     <p>Include the embed360 script:</p>
-    <code><pre> 
+    <code>
         &lt;script src="path/to/embed360.js"&gt;&lt;/script&gt;
-    </pre></code>
+    </code>
     
     <p>Call embed360() and pass in a class, id, or other selector for the photo container(s):</p>
-    <code><pre> 
+    <pre> 
         &lt;script&gt;
             embed360('.embed360');
         &lt;/script&gt;
-    </pre></code>
+    </pre>
     
     <p>That's it!</p>
 
@@ -67,11 +67,11 @@
     <h2>Options:</h2>
     
     <p>Provide your own path to the aframe library, as the second argument to embed360() (uses cloudflare CDN version by default).</p>
-        <code><pre> 
+        <pre><code> 
         &lt;script&gt;
             embed360('.embed360', '/your/path/to/aframe.js');
         &lt;/script&gt;
-        </pre></code>
+        </code></pre>
     <p>Use a data attribute to specify the starting position (<a href="https://aframe.io/docs/0.5.0/components/rotation.html">x, y, and z-axis rotation</a>) for each photo.</p>
     <code><pre> 
         &lt;div class="embed360" data-rotation="0 90 -10"&gt;
