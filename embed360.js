@@ -1,5 +1,5 @@
 function embed360(selectors, aframeSrc) {
-  aframeSrc = aframeSrc || "https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.min.js";
+  aframeSrc = aframeSrc || "https://aframe.io/releases/0.8.2/aframe.min.js";
   var elementList = document.querySelectorAll(selectors);
   for (var i = 0; i < elementList.length; ++i) {
     var el = elementList[i];
