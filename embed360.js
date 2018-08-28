@@ -31,6 +31,7 @@ function embed360(selectors, aframeSrc) {
     iframe.setAttribute('frameborder', '0');
     iframe.setAttribute('width', '100%');
     iframe.setAttribute('height', '100%');
+    iframe.setAttribute('aria-hidden', 'true');
     el.appendChild(iframe);
     iframe.contentWindow.document.open('text/html', 'replace');
     iframe.contentWindow.document.write(content);
